@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+/*function App() {
+  const items = [1, 2, 3, 4, 5];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {items.map((item) => (
+          <div>
+            <li>{item}</li>
+            <button>+</button>
+            <button>-</button>
+          </div>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+*/
+
+import Li from "./component/Li";
+
+function App() {
+  const items = [1, 2, 3, 4, 5];
+  return (
+    <div className="App">
+      <ul>
+        {items.map((item, index) => (
+          <Li data={item} key={index} />
+        ))}
+      </ul>
     </div>
   );
 }
